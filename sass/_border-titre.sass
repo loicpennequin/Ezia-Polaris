@@ -1,0 +1,48 @@
+.titre
+  .line-left
+    position: absolute
+    top: 0
+    left: 0
+    background-color: white
+    width: 1px
+    height: 0
+    transition: height 1s
+
+  a:hover ~ .line-left
+    height: 100%
+
+  .line-right
+    position: absolute
+    bottom: 0
+    right: 0
+    background-color: white
+    width: 1px
+    height: 0
+    transition: height 1s
+
+  a:hover ~ .line-right
+    height: 100%
+
+  .line-top
+    position: absolute
+    top: 0
+    left: 0
+    background-color: white
+    width: 0
+    height: 1px
+    transition: width 1s
+
+  a:hover ~ .line-top
+    width: 100%
+
+  .line-bottom
+    position: absolute
+    bottom: 0
+    right: 0
+    background-color: white
+    width: 0
+    height: 1px
+    transition: width 1s
+    
+  a:hover ~ .line-bottom
+    width: 100%
