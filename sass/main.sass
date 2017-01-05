@@ -1,15 +1,20 @@
+$font1: 'Cinzel', serif
+
 @import 'border-image'
 @import 'border-titre'
 @import 'hover-image'
+@import 'menu'
 
-$font1: 'Cinzel', serif
+
 
 html
   margin: 0
   padding: 0
 
 body
-  background: linear-gradient(black,#181821)
+  background: url('../media/background.jpg')
+  background-size: cover
+  //background: linear-gradient(black,#181821)
 
 header
   margin-top: 10px
@@ -45,13 +50,14 @@ header
     animation-duration: 2s
     animation-fill-mode: forwards
     a
-      color: white
-      opacity: 0.7
-      transition: padding 1s, opacity 1s
+      color: rgba(255,255,255,0.9)
+      opacity: 0.6
+      transition: padding 1s, opacity 1s, color 1.5s
     a:hover, a:visited
       color: white
       text-decoration: none
       opacity: 1
+      text-shadow: 0 0 3px white
 
 @keyframes init
   from
@@ -67,3 +73,7 @@ header
   to
     transform: none
     opacity: 0.7
+
+.lien-fb
+  transform: scale(0.8,0.8)
+  margin-top: 150px

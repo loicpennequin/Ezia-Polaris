@@ -8,8 +8,7 @@
   left: 0;
   background-color: rgba(255, 255, 255, 0.4);
   width: 2px;
-  height: 0;
-}
+  height: 0; }
 
 .img-right {
   animation-name: border-height;
@@ -21,8 +20,7 @@
   right: 0;
   background-color: rgba(255, 255, 255, 0.4);
   width: 2px;
-  height: 0;
-}
+  height: 0; }
 
 .img-top {
   animation-name: border-width;
@@ -34,8 +32,7 @@
   left: 0;
   background-color: rgba(255, 255, 255, 0.4);
   width: 0;
-  height: 2px;
-}
+  height: 2px; }
 
 .img-bottom {
   animation-name: border-width;
@@ -47,25 +44,18 @@
   right: 0;
   background-color: rgba(255, 255, 255, 0.4);
   width: 0;
-  height: 2px;
-}
+  height: 2px; }
 
 @keyframes border-height {
   from {
-    height: 0;
-  }
+    height: 0; }
   to {
-    height: 100%;
-  }
-}
+    height: 100%; } }
 @keyframes border-width {
   from {
-    width: 0;
-  }
+    width: 0; }
   to {
-    width: 100%;
-  }
-}
+    width: 100%; } }
 .titre .line-left {
   position: absolute;
   top: 0;
@@ -73,11 +63,9 @@
   background-color: white;
   width: 1px;
   height: 0;
-  transition: height 1s;
-}
+  transition: height 1s; }
 .titre a:hover ~ .line-left {
-  height: 100%;
-}
+  height: 100%; }
 .titre .line-right {
   position: absolute;
   bottom: 0;
@@ -85,11 +73,9 @@
   background-color: white;
   width: 1px;
   height: 0;
-  transition: height 1s;
-}
+  transition: height 1s; }
 .titre a:hover ~ .line-right {
-  height: 100%;
-}
+  height: 100%; }
 .titre .line-top {
   position: absolute;
   top: 0;
@@ -97,11 +83,9 @@
   background-color: white;
   width: 0;
   height: 1px;
-  transition: width 1s;
-}
+  transition: width 1s; }
 .titre a:hover ~ .line-top {
-  width: 100%;
-}
+  width: 100%; }
 .titre .line-bottom {
   position: absolute;
   bottom: 0;
@@ -109,11 +93,9 @@
   background-color: white;
   width: 0;
   height: 1px;
-  transition: width 1s;
-}
+  transition: width 1s; }
 .titre a:hover ~ .line-bottom {
-  width: 100%;
-}
+  width: 100%; }
 
 .hover-left {
   position: absolute;
@@ -121,12 +103,10 @@
   left: 0;
   width: 20%;
   height: 100%;
-  z-index: 2;
-}
+  z-index: 2; }
 
 .hover-left:hover ~ .img-responsive {
-  transform: translateX(-10%);
-}
+  transform: translateX(-10%); }
 
 .hover-right {
   position: absolute;
@@ -134,12 +114,10 @@
   right: 0;
   width: 20%;
   height: 100%;
-  z-index: 2;
-}
+  z-index: 2; }
 
 .hover-right:hover ~ .img-responsive {
-  transform: translateX(10%);
-}
+  transform: translateX(10%); }
 
 .hover-bottom {
   position: absolute;
@@ -147,12 +125,10 @@
   left: 0;
   width: 100%;
   height: 20%;
-  z-index: 2;
-}
+  z-index: 2; }
 
 .hover-bottom:hover ~ .img-responsive {
-  transform: translateY(10%);
-}
+  transform: translateY(10%); }
 
 .hover-top {
   position: absolute;
@@ -160,88 +136,97 @@
   left: 0;
   width: 100%;
   height: 20%;
-  z-index: 2;
-}
+  z-index: 2; }
 
 .hover-top:hover ~ .img-responsive {
-  transform: translateY(-10%);
-}
+  transform: translateY(-10%); }
+
+.menu {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 1.8em;
+  border-top: solid 1px #888;
+  border-bottom: solid 1px #888;
+  margin: 15px 0;
+  background-color: rgba(180, 180, 220, 0.2); }
+  @media (max-width: 768px) {
+    .menu {
+      text-align: left; } }
+  .menu .bouton {
+    color: white;
+    background-color: black;
+    border-left: solid 1px #888;
+    border-right: solid 1px #888;
+    opacity: 0.5;
+    transition: opacity 0.5s; }
+  .menu .bouton:hover {
+    opacity: 1; }
 
 html {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 body {
-  background: linear-gradient(black, #181821);
-}
+  background: url("../media/background.jpg");
+  background-size: cover; }
 
 header {
   margin-top: 10px;
-  text-align: center;
-}
-header .img-wrap {
-  width: 70%;
-  display: inline-block;
-  clear: both;
-  position: relative;
-  overflow: hidden;
-}
-header .img-wrap .img-responsive {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  animation-name: init;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  padding: 0;
-  transition: transform 0.5s;
-}
-header .titre {
-  position: relative;
-  margin-top: 10px;
-  padding: 0 10px;
-  opacity: 0;
-  display: inline-block;
-  color: white;
-  font-family: "Cinzel", serif;
-  font-size: 5em;
-  animation-name: title;
-  animation-delay: 2.5s;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-header .titre a {
-  color: white;
-  opacity: 0.7;
-  transition: padding 1s, opacity 1s;
-}
-header .titre a:hover, header .titre a:visited {
-  color: white;
-  text-decoration: none;
-  opacity: 1;
-}
+  text-align: center; }
+  header .img-wrap {
+    width: 70%;
+    display: inline-block;
+    clear: both;
+    position: relative;
+    overflow: hidden; }
+    header .img-wrap .img-responsive {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      animation-name: init;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      padding: 0;
+      transition: transform 0.5s; }
+  header .titre {
+    position: relative;
+    margin-top: 10px;
+    padding: 0 10px;
+    opacity: 0;
+    display: inline-block;
+    color: white;
+    font-family: "Cinzel", serif;
+    font-size: 5em;
+    animation-name: title;
+    animation-delay: 2.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; }
+    header .titre a {
+      color: rgba(255, 255, 255, 0.9);
+      opacity: 0.6;
+      transition: padding 1s, opacity 1s, color 1.5s; }
+    header .titre a:hover, header .titre a:visited {
+      color: white;
+      text-decoration: none;
+      opacity: 1;
+      text-shadow: 0 0 3px white; }
 
 @keyframes init {
   from {
-    opacity: 0;
-  }
+    opacity: 0; }
   50% {
-    opacity: 0;
-  }
+    opacity: 0; }
   to {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 @keyframes title {
   from {
-    transform: translate3d(0, -200%, 0);
-  }
+    transform: translate3d(0, -200%, 0); }
   to {
     transform: none;
-    opacity: 0.7;
-  }
-}
+    opacity: 0.7; } }
+.lien-fb {
+  transform: scale(0.8, 0.8);
+  margin-top: 150px; }
 
 /*# sourceMappingURL=main.css.map */
