@@ -1,4 +1,7 @@
 
   window.setTimeout(function(){
-    $("#toggle-mask").addClass("color-mask");
-  }, 4000);
+    $("#hvr-left").addClass("hover-left");
+    $("#hvr-right").addClass("hover-right");
+    $("#hvr-bottom").addClass("hover-bottom");
+    $("#hvr-top").addClass("hover-top");
+  }, 5000);

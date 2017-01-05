@@ -7,8 +7,9 @@
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.4);
-  width: 1px;
-  height: 0; }
+  width: 2px;
+  height: 0;
+}
 
 .img-right {
   animation-name: border-height;
@@ -19,8 +20,9 @@
   bottom: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.4);
-  width: 1px;
-  height: 0; }
+  width: 2px;
+  height: 0;
+}
 
 .img-top {
   animation-name: border-width;
@@ -32,7 +34,8 @@
   left: 0;
   background-color: rgba(255, 255, 255, 0.4);
   width: 0;
-  height: 1px; }
+  height: 2px;
+}
 
 .img-bottom {
   animation-name: border-width;
@@ -44,18 +47,25 @@
   right: 0;
   background-color: rgba(255, 255, 255, 0.4);
   width: 0;
-  height: 1px; }
+  height: 2px;
+}
 
 @keyframes border-height {
   from {
-    height: 0; }
+    height: 0;
+  }
   to {
-    height: 100%; } }
+    height: 100%;
+  }
+}
 @keyframes border-width {
   from {
-    width: 0; }
+    width: 0;
+  }
   to {
-    width: 100%; } }
+    width: 100%;
+  }
+}
 .titre .line-left {
   position: absolute;
   top: 0;
@@ -63,9 +73,11 @@
   background-color: white;
   width: 1px;
   height: 0;
-  transition: height 1s; }
+  transition: height 1s;
+}
 .titre a:hover ~ .line-left {
-  height: 100%; }
+  height: 100%;
+}
 .titre .line-right {
   position: absolute;
   bottom: 0;
@@ -73,9 +85,11 @@
   background-color: white;
   width: 1px;
   height: 0;
-  transition: height 1s; }
+  transition: height 1s;
+}
 .titre a:hover ~ .line-right {
-  height: 100%; }
+  height: 100%;
+}
 .titre .line-top {
   position: absolute;
   top: 0;
@@ -83,9 +97,11 @@
   background-color: white;
   width: 0;
   height: 1px;
-  transition: width 1s; }
+  transition: width 1s;
+}
 .titre a:hover ~ .line-top {
-  width: 100%; }
+  width: 100%;
+}
 .titre .line-bottom {
   position: absolute;
   bottom: 0;
@@ -93,40 +109,86 @@
   background-color: white;
   width: 0;
   height: 1px;
-  transition: width 1s; }
+  transition: width 1s;
+}
 .titre a:hover ~ .line-bottom {
-  width: 100%; }
+  width: 100%;
+}
 
-html {
-  margin: 0;
-  padding: 0; }
-
-body {
-  background: linear-gradient(black, #050508); }
-
-header {
-  margin-top: 10px;
-  text-align: center; }
-header .img-wrap {
-  display: inline-block;
-  clear: both;
-  position: relative; }
-header .img-wrap .color-mask {
-  background-color: rgba(0, 100, 100, 0.2); }
-header .img-wrap .mask {
-  z-index: 1;
+.hover-left {
   position: absolute;
   top: 0;
   left: 0;
-  height: 0;
+  width: 20%;
+  height: 100%;
+  z-index: 2;
+}
+
+.hover-left:hover ~ .img-responsive {
+  transform: translateX(-10%);
+}
+
+.hover-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  z-index: 2;
+}
+
+.hover-right:hover ~ .img-responsive {
+  transform: translateX(10%);
+}
+
+.hover-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  transition: height 1s; }
-header .img-wrap .img-responsive:hover + .mask {
-  opacity: 1;
-  height: 100%; }
-header .img-wrap .img-responsive:hover {
-  transform: scale(1.2, 1.2); }
+  height: 20%;
+  z-index: 2;
+}
+
+.hover-bottom:hover ~ .img-responsive {
+  transform: translateY(10%);
+}
+
+.hover-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  z-index: 2;
+}
+
+.hover-top:hover ~ .img-responsive {
+  transform: translateY(-10%);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(black, #181821);
+}
+
+header {
+  margin-top: 10px;
+  text-align: center;
+}
+header .img-wrap {
+  width: 70%;
+  display: inline-block;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+}
 header .img-wrap .img-responsive {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   animation-name: init;
@@ -134,10 +196,11 @@ header .img-wrap .img-responsive {
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   padding: 0;
-  transition: transform 0.8s; }
+  transition: transform 0.5s;
+}
 header .titre {
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 0 10px;
   opacity: 0;
   display: inline-block;
@@ -147,35 +210,38 @@ header .titre {
   animation-name: title;
   animation-delay: 2.5s;
   animation-duration: 2s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+}
 header .titre a {
   color: white;
   opacity: 0.7;
-  transition: padding 1s, opacity 1s; }
+  transition: padding 1s, opacity 1s;
+}
 header .titre a:hover, header .titre a:visited {
   color: white;
   text-decoration: none;
   opacity: 1;
-  text-shadow: 0 0 2px white, -3px 0 5px gray; }
-
-.overflow {
-  position: relative;
-  display: inline-block;
-  clear: both;
-  overflow: hidden; }
+}
 
 @keyframes init {
   from {
-    opacity: 0; }
+    opacity: 0;
+  }
   50% {
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 @keyframes title {
   from {
-    transform: translate3d(0, -200%, 0); }
+    transform: translate3d(0, -200%, 0);
+  }
   to {
     transform: none;
-    opacity: 0.7; } }
+    opacity: 0.7;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
