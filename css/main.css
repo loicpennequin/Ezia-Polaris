@@ -165,10 +165,10 @@
     border-right: solid 1px #888;
     opacity: 0.5;
     transition: opacity 0.5s; }
-    .menu button button:hover {
-      opacity: 1; }
+  .menu button:hover {
+    opacity: 1; }
     @media (max-width: 768px) {
-      .menu button {
+      .menu button:hover {
         margin-top: 5px; } }
 
 html {
