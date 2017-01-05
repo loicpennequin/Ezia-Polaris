@@ -151,16 +151,25 @@
   background-color: rgba(180, 180, 220, 0.2); }
   @media (max-width: 768px) {
     .menu {
-      text-align: left; } }
-  .menu .bouton {
+      text-align: left;
+      padding-bottom: 5px;
+      margin-left: 5%;
+      margin-right: 5%; } }
+  .menu button {
+    width: 100%;
     color: white;
     background-color: black;
+    border-top: none;
+    border-bottom: none;
     border-left: solid 1px #888;
     border-right: solid 1px #888;
     opacity: 0.5;
     transition: opacity 0.5s; }
-  .menu .bouton:hover {
-    opacity: 1; }
+    .menu button button:hover {
+      opacity: 1; }
+    @media (max-width: 768px) {
+      .menu button {
+        margin-top: 5px; } }
 
 html {
   margin: 0;
@@ -179,6 +188,9 @@ header {
     clear: both;
     position: relative;
     overflow: hidden; }
+    @media (max-width: 768px) {
+      header .img-wrap {
+        width: 90%; } }
     header .img-wrap .img-responsive {
       position: relative;
       margin-left: auto;
@@ -202,6 +214,9 @@ header {
     animation-delay: 2.5s;
     animation-duration: 2s;
     animation-fill-mode: forwards; }
+    @media (max-width: 768px) {
+      header .titre {
+        font-size: 3em; } }
     header .titre a {
       color: rgba(255, 255, 255, 0.9);
       opacity: 0.6;

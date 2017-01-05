@@ -8,12 +8,20 @@
   background-color: rgba(180,180,220,0.2)
   @media (max-width: 768px)
     text-align: left
-  .bouton
+    padding-bottom: 5px
+    margin-left: 5%
+    margin-right: 5%
+  button
+    width: 100%
     color: white
     background-color: black
+    border-top: none
+    border-bottom: none
     border-left: solid 1px #888
     border-right: solid 1px #888
     opacity: 0.5
     transition: opacity 0.5s
-  .bouton:hover
-    opacity: 1
+    button:hover
+      opacity: 1
+    @media (max-width: 768px)
+      margin-top: 5px
