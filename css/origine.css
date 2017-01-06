@@ -1,0 +1,44 @@
+body {
+  background: url("../media/background.jpg");
+  background-size: cover;
+  position: relative; }
+
+section {
+  margin-top: 20px; }
+  section .ban-wrap {
+    display: inline-block;
+    clear: both;
+    position: relative;
+    width: 80%;
+    margin-bottom: 100px; }
+    section .ban-wrap .img-responsive {
+      mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
+      margin: 0 auto;
+      opacity: 0.4;
+      border: solid 2px white;
+      margin-bottom: 60px; }
+    section .ban-wrap .origine .origine-titre {
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 5px 5px;
+      color: rgba(255, 255, 255, 0.4);
+      font-family: "Cinzel", serif;
+      font-size: 1.2em;
+      border: solid 1px rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 60px; }
+    section .ban-wrap .origine .origine-par {
+      text-align: justify;
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 5px 5px;
+      color: rgba(255, 255, 255, 0.4);
+      font-family: "Cinzel", serif;
+      font-size: 1.2em;
+      border: solid 1px rgba(255, 255, 255, 0.2);
+      border-radius: 5px; }
+
+.lien-fb {
+  transform: scale(0.8, 0.8); }
+
+/*# sourceMappingURL=origine.css.map */

@@ -1,20 +1,17 @@
 .menu
-  overflow: hidden
   text-align: center
   border-top: solid 1px #888
   border-bottom: solid 1px #888
-  margin  : 0.8em 0 4em
+  margin-top: 0.8em
   background-color: rgba(50, 50, 50, 0.3)
   animation-name: menu-anim
   animation-duration: 3s
-  animation-fill-mode: forwards
   @media (max-width: 768px)
     text-align: left
     padding-bottom: 5px
     margin-left: 5%
     margin-right: 5%
-  button
-    width: 100%
+  .bouton
     background-color: black
     border-top: none
     border-bottom: none
@@ -22,21 +19,45 @@
     border-right: solid 1px #888
     opacity: 0.5
     transition: opacity 0.5s, text-shadow 0.7s
+    .dropdown
+      position: relative
+      display: inline-block
+      .dropdown-content
+        display: none
+        position: absolute
+        @media (max-width: 768px)
+          position: relative
+        background-color: rgba(0,0,0,0.5)
+        min-width: 160px
+        border: solid 1px rgba(255,255,255,0.3)
+        a
+          display: block
+          text-align: justify
+          padding: 0 5px
+          color: rgba(255,255,255,0.3)
+          font-size: 1.1em
+          transition: color 0.3s
+        a:hover
+          color: rgba(255,255,255,0.7)
+    .dropdown:hover
+      .dropdown-content
+        display: block
     a
       font-family: $font1
       font-size: 1.8em
       color: white
+      @media (max-width: 768px)
+        font-size: 1.5em
     a:hover, a:visited
       text-decoration: none
-  button:hover
+  .bouton:hover
     opacity: 1
-    text-shadow: 7px 2px 5px DarkGray, -4px -2px 5px LightGray
-    @media (max-width: 768px)
-      margin-top: 5px
 
 
 
-@keyframes menu-anim
+
+
+//@keyframes menu-anim
   from
     opacity: 0
     transform: translateX(-100%)

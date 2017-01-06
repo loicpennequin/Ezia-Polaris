@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACF,UAAU,EAAE,8BAA8B;EAC1C,eAAe,EAAE,KAAK;EACtB,QAAQ,EAAE,QAAQ",
+"sources": ["../sass/_body.sass"],
+"names": [],
+"file": "chap-1.css"
+}
