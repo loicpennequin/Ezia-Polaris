@@ -1,7 +1,7 @@
 .img-left {
   animation-name: border-height;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   position: absolute;
   top: 0;
@@ -13,7 +13,7 @@
 .img-right {
   animation-name: border-height;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   position: absolute;
   bottom: 0;
@@ -25,7 +25,7 @@
 .img-top {
   animation-name: border-width;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   position: absolute;
   top: 0;
@@ -37,7 +37,7 @@
 .img-bottom {
   animation-name: border-width;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   position: absolute;
   bottom: 0;
@@ -142,98 +142,114 @@
   transform: translateY(-10%); }
 
 .menu {
+  overflow: hidden;
   text-align: center;
-  font-family: "Cinzel", serif;
-  font-size: 1.8em;
   border-top: solid 1px #888;
   border-bottom: solid 1px #888;
-  margin: 15px 0;
-  background-color: rgba(180, 180, 220, 0.2); }
-  @media (max-width: 768px) {
-    .menu {
-      text-align: left;
-      padding-bottom: 5px;
-      margin-left: 5%;
-      margin-right: 5%; } }
-  .menu button {
-    width: 100%;
-    color: white;
-    background-color: black;
-    border-top: none;
-    border-bottom: none;
-    border-left: solid 1px #888;
-    border-right: solid 1px #888;
-    opacity: 0.5;
-    transition: opacity 0.5s; }
+  margin: 0.8em 0 4em;
+  background-color: rgba(50, 50, 50, 0.3);
+  animation-name: menu-anim;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; }
+@media (max-width: 768px) {
+  .menu {
+    text-align: left;
+    padding-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%; } }
+.menu button {
+  width: 100%;
+  background-color: black;
+  border-top: none;
+  border-bottom: none;
+  border-left: solid 1px #888;
+  border-right: solid 1px #888;
+  opacity: 0.5;
+  transition: opacity 0.5s, text-shadow 0.7s; }
+.menu button a {
+  font-family: "Cinzel", serif;
+  font-size: 1.8em;
+  color: white; }
+.menu button a:hover, .menu button a:visited {
+  text-decoration: none; }
+.menu button:hover {
+  opacity: 1;
+  text-shadow: 7px 2px 5px DarkGray, -4px -2px 5px LightGray; }
+@media (max-width: 768px) {
   .menu button:hover {
-    opacity: 1; }
-    @media (max-width: 768px) {
-      .menu button:hover {
-        margin-top: 5px; } }
+    margin-top: 5px; } }
+
+@keyframes menu-anim {
+  from {
+    opacity: 0;
+    transform: translateX(-100%); }
+  to {
+    opacity: 1;
+    transform: none; } }
+body {
+  background: url("../media/background.jpg");
+  background-size: cover;
+  position: relative; }
 
 html {
   margin: 0;
   padding: 0; }
 
-body {
-  background: url("../media/background.jpg");
-  background-size: cover; }
-
 header {
-  margin-top: 10px;
-  text-align: center; }
+  margin-top: 10px; }
+header .img-wrap {
+  display: inline-block;
+  clear: both;
+  position: relative;
+  width: 70%;
+  overflow: hidden; }
+@media (max-width: 768px) {
   header .img-wrap {
-    width: 70%;
-    display: inline-block;
-    clear: both;
-    position: relative;
-    overflow: hidden; }
-    @media (max-width: 768px) {
-      header .img-wrap {
-        width: 90%; } }
-    header .img-wrap .img-responsive {
-      position: relative;
-      margin-left: auto;
-      margin-right: auto;
-      animation-name: init;
-      animation-duration: 2s;
-      animation-timing-function: linear;
-      animation-fill-mode: forwards;
-      padding: 0;
-      transition: transform 0.5s; }
+    width: 90%; } }
+header .img-wrap .img-responsive {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: init;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  padding: 0;
+  transition: transform 0.5s; }
+header .titre {
+  position: relative;
+  margin-top: 10px;
+  padding: 0 10px;
+  opacity: 0;
+  display: inline-block;
+  color: white;
+  font-family: "Cinzel", serif;
+  font-size: 5em;
+  animation-name: title;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+@media (max-width: 768px) {
   header .titre {
-    position: relative;
-    margin-top: 10px;
-    padding: 0 10px;
-    opacity: 0;
-    display: inline-block;
-    color: white;
-    font-family: "Cinzel", serif;
-    font-size: 5em;
-    animation-name: title;
-    animation-delay: 2.5s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards; }
-    @media (max-width: 768px) {
-      header .titre {
-        font-size: 3em; } }
-    header .titre a {
-      color: rgba(255, 255, 255, 0.9);
-      opacity: 0.6;
-      transition: padding 1s, opacity 1s, color 1.5s; }
-    header .titre a:hover, header .titre a:visited {
-      color: white;
-      text-decoration: none;
-      opacity: 1;
-      text-shadow: 0 0 3px white; }
+    font-size: 3em; } }
+header .titre a {
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0.6;
+  transition: padding 1s, opacity 1s, color 1.5s; }
+header .titre a:hover, header .titre a:visited {
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+  text-shadow: 0 0 3px white; }
 
 @keyframes init {
   from {
     opacity: 0; }
-  50% {
-    opacity: 0; }
+  70% {
+    opacity: 0;
+    transform: scale(0.1, 0.1); }
   to {
-    opacity: 1; } }
+    opacity: 1;
+    transform: scale(1, 1); } }
 @keyframes title {
   from {
     transform: translate3d(0, -200%, 0); }
@@ -241,7 +257,6 @@ header {
     transform: none;
     opacity: 0.7; } }
 .lien-fb {
-  transform: scale(0.8, 0.8);
-  margin-top: 150px; }
+  transform: scale(0.8, 0.8); }
 
 /*# sourceMappingURL=main.css.map */

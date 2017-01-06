@@ -1,11 +1,13 @@
 .menu
+  overflow: hidden
   text-align: center
-  font-family: $font1
-  font-size: 1.8em
   border-top: solid 1px #888
   border-bottom: solid 1px #888
-  margin  : 15px 0
-  background-color: rgba(180,180,220,0.2)
+  margin  : 0.8em 0 4em
+  background-color: rgba(50, 50, 50, 0.3)
+  animation-name: menu-anim
+  animation-duration: 3s
+  animation-fill-mode: forwards
   @media (max-width: 768px)
     text-align: left
     padding-bottom: 5px
@@ -13,15 +15,31 @@
     margin-right: 5%
   button
     width: 100%
-    color: white
     background-color: black
     border-top: none
     border-bottom: none
     border-left: solid 1px #888
     border-right: solid 1px #888
     opacity: 0.5
-    transition: opacity 0.5s
+    transition: opacity 0.5s, text-shadow 0.7s
+    a
+      font-family: $font1
+      font-size: 1.8em
+      color: white
+    a:hover, a:visited
+      text-decoration: none
   button:hover
     opacity: 1
+    text-shadow: 7px 2px 5px DarkGray, -4px -2px 5px LightGray
     @media (max-width: 768px)
       margin-top: 5px
+
+
+
+@keyframes menu-anim
+  from
+    opacity: 0
+    transform: translateX(-100%)
+  to
+    opacity: 1
+    transform: none

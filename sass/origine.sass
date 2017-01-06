@@ -1,0 +1,31 @@
+@import 'mixin'
+@import 'body'
+@import 'var'
+
+section
+  margin-top: 20px
+  .ban-wrap
+    @include wrapper
+    width: 80%
+    margin-bottom: 100px
+    .img-responsive
+      mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg)
+      margin: 0 auto
+      opacity: 0.4
+      border: solid 2px white
+      margin-bottom: 60px
+    .origine
+      .origine-titre
+        @include orig-txt
+        text-align: center
+        font-size: 2em
+        margin-bottom: 60px
+      .origine-par
+        text-align: justify
+        @include orig-txt
+
+
+
+
+.lien-fb
+  transform: scale(0.8,0.8)
