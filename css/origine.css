@@ -93,7 +93,8 @@ section .ban-wrap .origine .origine-par {
   font-family: "Cinzel", serif;
   font-size: 1.2em;
   border: solid 1px rgba(255, 255, 255, 0.2);
-  border-radius: 5px; }
+  border-radius: 5px;
+  padding: 10px 20px; }
 
 .lien-fb {
   transform: scale(0.8, 0.8); }
