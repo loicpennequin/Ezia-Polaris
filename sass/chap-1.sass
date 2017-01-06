@@ -1,3 +1,21 @@
 @import 'mixin'
 @import 'body'
 @import 'var'
+
+$transparent: rgba(0,0,0,0)
+$couleur1: rgba(60, 0, 30,0.3)
+
+.titre
+  text-align: center
+  background-color: $transparent
+  background: linear-gradient(to right, $transparent ,$couleur1)
+  @include orig-txt
+  margin-left: 25%
+  margin-right: 25%
+  margin-bottom: 20px
+
+.content
+  text-align: justify
+  @include orig-txt
+  margin-left: 25%
+  margin-right: 25%

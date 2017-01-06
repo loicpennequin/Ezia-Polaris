@@ -146,6 +146,7 @@
   border-top: solid 1px #888;
   border-bottom: solid 1px #888;
   margin-top: 0.8em;
+  margin-bottom: 100px;
   background-color: rgba(50, 50, 50, 0.3);
   animation-name: menu-anim;
   animation-duration: 3s; }
@@ -180,7 +181,7 @@
   text-align: justify;
   padding: 0 5px;
   color: rgba(255, 255, 255, 0.3);
-  font-size: 1.1em;
+  font-size: 0.9em;
   transition: color 0.3s; }
 .menu .bouton .dropdown .dropdown-content a:hover {
   color: rgba(255, 255, 255, 0.7); }
@@ -192,7 +193,7 @@
   color: white; }
 @media (max-width: 768px) {
   .menu .bouton a {
-    font-size: 1.5em; } }
+    font-size: 1.2em; } }
 .menu .bouton a:hover, .menu .bouton a:visited {
   text-decoration: none; }
 .menu .bouton:hover {
@@ -202,12 +203,6 @@ body {
   background: url("../media/background.jpg");
   background-size: cover;
   position: relative; }
-
-.test {
-  background-color: white; }
-
-.blank {
-  height: 800px; }
 
 html {
   margin: 0;
@@ -274,7 +269,5 @@ header .titre a:hover, header .titre a:visited {
   to {
     transform: none;
     opacity: 0.7; } }
-.lien-fb {
-  transform: scale(0.8, 0.8); }
 
 /*# sourceMappingURL=main.css.map */
